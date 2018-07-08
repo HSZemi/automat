@@ -1,0 +1,69 @@
+{
+    "start": {
+        "text": "This is the start state!",
+        "question": "Let's start?",
+        "options": [
+            {
+                "text": "To the middle!",
+                "next": "middle",
+                "class": "",
+                "score": 0
+            }
+        ],
+        "image": "hopscotch-1325854_640.jpg"
+    },
+    "middle": {
+        "text": "We are in the middle!",
+        "question": "O.O",
+        "options": [
+            {
+                "text": "Stay!",
+                "next": "middle",
+                "class": "blue",
+                "score": 1
+            },
+            {
+                "text": "To the end!",
+                "next": [
+                    {
+                        "state": "end_more_than_ten"
+                    },
+                    {
+                        "min": 0,
+                        "max": 10,
+                        "state": "end"
+                    }
+                ],
+                "class": "red",
+                "score": 0
+            }
+        ],
+        "image": "feet-1868670_640.jpg"
+    },
+    "end": {
+        "text": "This is the end.",
+        "question": "You know.",
+        "options": [
+            {
+                "text": "Restart",
+                "next": "start",
+                "class": "",
+                "score": "reset"
+            }
+        ],
+        "image": "lighthouse-1938740_640.jpg"
+    },
+    "end_more_than_ten": {
+        "text": "You clicked more than ten times.",
+        "question": "Good job!",
+        "options": [
+            {
+                "text": "Restart",
+                "next": "start",
+                "class": "",
+                "score": "reset"
+            }
+        ],
+        "image": "hip-hop-1209499_640.jpg"
+    }
+}

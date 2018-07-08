@@ -1,0 +1,137 @@
+/* rubik-regular - latin-ext_latin */
+
+@font-face {
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Rubik'), local('Rubik-Regular'), url('../fonts/rubik-v7-latin-ext_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('../fonts/rubik-v7-latin-ext_latin-regular.woff') format('woff');
+	/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* alegreya-regular - latin-ext_latin */
+
+@font-face {
+	font-family: 'Alegreya';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Alegreya Regular'), local('Alegreya-Regular'), url('../fonts/alegreya-v10-latin-ext_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('../fonts/alegreya-v10-latin-ext_latin-regular.woff') format('woff');
+	/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* alegreya-500italic - latin-ext_latin */
+
+@font-face {
+	font-family: 'Alegreya';
+	font-style: italic;
+	font-weight: 500;
+	src: local('Alegreya Medium Italic'), local('Alegreya-MediumItalic'), url('../fonts/alegreya-v10-latin-ext_latin-500italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('../fonts/alegreya-v10-latin-ext_latin-500italic.woff') format('woff');
+	/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* alegreya-800 - latin-ext_latin */
+
+@font-face {
+	font-family: 'Alegreya';
+	font-style: normal;
+	font-weight: 800;
+	src: local('Alegreya ExtraBold'), local('Alegreya-ExtraBold'), url('../fonts/alegreya-v10-latin-ext_latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('../fonts/alegreya-v10-latin-ext_latin-800.woff') format('woff');
+	/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+html, body {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: "Alegreya", serif;
+	display: grid;
+	grid-template-columns: 40% 40% 20%;
+	grid-template-rows: auto auto auto;
+	align-items: center;
+}
+
+.content {
+	z-index: 600;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 2;
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 2rem;
+	font-size: 1.3rem;
+}
+
+#question {
+	font-size: 2rem;
+}
+
+.background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+#background-back {
+	z-index: 500;
+	opacity: 1;
+}
+
+#background-front {
+	z-index: 501;
+	opacity: 1;
+}
+
+.animate {
+	-webkit-transition: opacity .6s ease-in-out;
+	-moz-transition: opacity .6s ease-in-out;
+	-o-transition: opacity .6s ease-in-out;
+	transition: opacity .6s ease-in-out;
+}
+
+button {
+	padding: .6rem;
+	margin: 0rem .5rem .5rem 0rem;
+	font-family: Rubik, 'sans-serif';
+	font-size: 1.8rem;
+	background-color: rgba(200, 200, 200, 0.6);
+	border: 1pt solid #eee;
+}
+
+button.blue {
+	background-color: rgba(88, 193, 235, 0.4);
+}
+
+button.red {
+	background-color: rgba(235, 88, 137, 0.4);
+}
+
+@media (max-width: 991.98px) {
+	body {
+		grid-template-columns: 5% 90% 5%;
+	}
+	.content {
+		padding: .5rem;
+		font-size: 1.1rem;
+	}
+	#question {
+		font-size: 1.3rem;
+	}
+	button {
+		display: block;
+		width: 100%;
+		font-size: 1.3rem;
+	}
+}
