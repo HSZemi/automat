@@ -67,6 +67,13 @@ body {
 	font-size: 1.3rem;
 }
 
+#mainarea {
+	-webkit-transition: opacity .6s ease-in-out;
+	-moz-transition: opacity .6s ease-in-out;
+	-o-transition: opacity .6s ease-in-out;
+	transition: opacity .6s ease-in-out;
+}
+
 #question {
 	font-size: 2rem;
 }

@@ -14,10 +14,14 @@ function loadByButtonNumber(oldState, buttonNumber, scoreChange) {
 			}
 		}
 	}
-	load(state, scoreChange);
+	document.getElementById("mainarea").style.opacity = 0;
+	setTimeout(function () {
+		load(state, scoreChange);
+	}, 700);
 }
 
 function load(key, scoreChange) {
+	document.getElementById("mainarea").style.opacity = 1;
 	if (scoreChange === "reset") {
 		score = 0;
 	} else {
